@@ -1,0 +1,127 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+ul,
+li {
+  list-style-type: none;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+button {
+  background: none;
+  border: none;
+  z-index: 2;
+}
+.menu {
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  box-shadow: 0 0 5px #000;
+  display: flex;
+  justify-content: center;
+  border-radius: 50%;
+  align-items: center;
+}
+.mainItem {
+  border-radius: 50%;
+  font-size: 2rem;
+  transition: all 1s ease-in-out;
+  z-index: 2;
+  background-color: #fff;
+  width: 100%;
+  height: 100%;
+}
+.menu.active {
+  box-shadow: 0 0 15px #000;
+}
+.menu.active .mainItem {
+  transform: rotate(360deg);
+}
+.menuItem {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 3rem;
+  z-index: 1;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+}
+.menuItem:nth-child(2) {
+  transition: all 0.5s 0.3s;
+}
+.menuItem:nth-child(3) {
+  transition: all 0.5s 0.5s;
+}
+.menuItem:nth-child(4) {
+  transition: all 0.5s 0.7s;
+}
+.menuItem:nth-child(5) {
+  transition: all 0.5s 0.9s;
+}
+.menuItem:nth-child(6) {
+  transition: all 0.5s 1.1s;
+}
+.menuItem:nth-child(7) {
+  transition: all 0.5s 1.3s;
+}
+
+.fa-facebook {
+  color: #395498;
+}
+.fa-instagram {
+  color: #f403d6;
+}
+.fa-linkedin {
+  color: #0a63bc;
+}
+.fa-whatsapp {
+  color: #30ea66;
+}
+.fa-twitter {
+  color: #1c96e8;
+}
+.fa-github {
+  color: #000;
+}
+
+.menu.active .menuItem:nth-child(2) {
+  transform: translate(250%, -50%) rotate(360deg);
+  filter: drop-shadow(0 0 3px grey);
+  opacity: 1;
+}
+.menu.active .menuItem:nth-child(3) {
+  transform: translate(100%, -250%) rotate(360deg);
+  filter: drop-shadow(0 0 3px grey);
+  opacity: 1;
+}
+.menu.active .menuItem:nth-child(4) {
+  transform: translate(-200%, -250%) rotate(360deg);
+  filter: drop-shadow(0 0 3px grey);
+  opacity: 1;
+}
+.menu.active .menuItem:nth-child(5) {
+  transform: translate(-350%, -50%) rotate(360deg);
+  filter: drop-shadow(0 0 3px grey);
+  opacity: 1;
+}
+.menu.active .menuItem:nth-child(6) {
+  transform: translate(150%, 150%) rotate(360deg);
+  filter: drop-shadow(0 0 3px grey);
+  opacity: 1;
+}
+.menu.active .menuItem:nth-child(7) {
+  transform: translate(-170%, 150%) rotate(360deg);
+  filter: drop-shadow(0 0 3px grey);
+  opacity: 1;
+}

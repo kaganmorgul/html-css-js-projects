@@ -1,0 +1,88 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+ul,
+li {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+}
+.textContainer {
+  height: 80px;
+  font-size: 20px;
+  background-color: black;
+  color: rgb(255, 255, 255);
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  overflow: hidden;
+}
+ul li {
+  margin: 20px;
+  font-size: 30px;
+}
+ul {
+  transform: translateY(40%);
+  animation: text 5s ease infinite;
+}
+@keyframes text {
+  0% {
+    transform: translateY(40%);
+  }
+  25% {
+    transform: translateY(20%);
+  }
+  50% {
+    transform: translateY(0%);
+  }
+  75% {
+    transform: translateY(-20%);
+  }
+  100% {
+    transform: translateY(-40%);
+  }
+}
+
+.name {
+  font-size: 3rem;
+  background: -webkit-linear-gradient(
+    right,
+    rgb(29, 28, 28),
+    rgb(255, 255, 255),
+    rgb(29, 28, 28)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+li:nth-child(1) {
+  color: rgb(117, 117, 117);
+  text-shadow: 0 0 20px rgb(117, 117, 117);
+}
+li:nth-child(2) {
+  color: purple;
+  text-shadow: 0 0 20px purple;
+}
+li:nth-child(3) {
+  color: yellow;
+  text-shadow: 0 0 20px yellow;
+}
+li:nth-child(4) {
+  color: blue;
+  text-shadow: 0 0 20px blue;
+}
+li:nth-child(5) {
+  color: rgb(123, 255, 0);
+  text-shadow: 0 0 20px rgb(123, 255, 0);
+}

@@ -1,0 +1,68 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+:root {
+  --primaryColor: #000;
+  --secondaryColor: #fff;
+}
+
+[data-theme="light"] {
+  --primaryColor: #000;
+  --secondaryColor: #fff;
+}
+[data-theme="dark"] {
+  --primaryColor: #fff;
+  --secondaryColor: #000;
+}
+ul,
+li {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--secondaryColor);
+  transition: all 0.4s;
+}
+.container {
+  display: grid;
+  justify-items: center;
+  gap: 2rem;
+  margin-top: 4rem;
+  width: 90%;
+  color: var(--primaryColor);
+}
+i {
+  font-size: 2rem;
+}
+
+.themeSet {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  right: 10px;
+  top: 10px;
+  width: 45px;
+  height: 25px;
+  background-color: rgb(211, 211, 211);
+  border-radius: 20px;
+}
+.themeSet::before {
+  content: "";
+  position: absolute;
+  left: 2px;
+  width: 20px;
+  height: 20px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 50%;
+  transition: all 0.5s;
+}
+.themeSet.active::before {
+  left: 23px;
+}

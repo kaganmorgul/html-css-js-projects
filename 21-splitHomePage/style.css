@@ -1,0 +1,85 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+ul,
+li {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
+
+.container {
+  height: 100vh;
+  background-color: red;
+  display: flex;
+  transition: all 1s;
+}
+.container div {
+  flex: 1;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  background-position: center center;
+  align-items: center;
+  transition: all 0.5s;
+}
+h1 {
+  background-color: rgba(255, 255, 255, 0.521);
+  padding: 1rem;
+  border-radius: 10px;
+  opacity: 0;
+  transition: all 0.5s;
+}
+h1:hover {
+  background-color: rgba(255, 255, 255, 0.774);
+  cursor: pointer;
+}
+.container div:hover {
+  flex: 3;
+}
+.drink {
+  flex: 1;
+  background-image: url("./pics/drink.jpg");
+  background-color: rgba(255, 0, 0, 0.2);
+  background-blend-mode: multiply;
+}
+.drink:hover {
+  background-color: transparent;
+}
+.drink:hover h1 {
+  opacity: 1;
+}
+.cake {
+  flex: 1;
+  background-image: url("./pics/cake.jpg");
+  background-color: rgba(219, 139, 86, 0.562);
+  background-blend-mode: multiply;
+}
+.cake:hover {
+  background-color: transparent;
+}
+.cake:hover h1 {
+  opacity: 1;
+}
+.cookie {
+  flex: 1;
+  background-image: url("./pics/cookie.jpg");
+  background-color: rgba(138, 131, 126, 0.562);
+  background-blend-mode: multiply;
+}
+.cookie:hover {
+  background-color: transparent;
+}
+.cookie:hover h1 {
+  opacity: 1;
+}
+
+@media screen and (max-width: 700px) {
+  .container {
+    transition: all 1s;
+    flex-direction: column;
+  }
+}

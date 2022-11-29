@@ -1,0 +1,221 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+ul,
+li {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 3rem;
+}
+.post {
+  position: relative;
+  width: 400px;
+  border-radius: 4px;
+  box-shadow: 0 0 2px rgb(146, 146, 146);
+  user-select: none;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+}
+.headerLeft {
+  display: flex;
+  align-items: center;
+  margin-left: 1rem;
+}
+.headerLeft p {
+  margin-left: 0.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  color: rgb(109, 109, 109);
+}
+.headerRight {
+  display: flex;
+  align-items: center;
+  margin-right: 1rem;
+}
+.postpp {
+  height: 45px;
+  width: 45px;
+  border-radius: 50%;
+  background: linear-gradient(red, purple);
+  border: 1px solid #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.postpp img {
+  border: 2px solid #fff;
+  height: 39px;
+  width: 39px;
+  border-radius: 50%;
+}
+.underphotoIcons {
+  display: flex;
+  justify-content: space-between;
+}
+i {
+  position: absolute;
+  z-index: 2;
+  font-size: 2.5rem;
+  color: red;
+}
+
+/* like effect 1 */
+
+i {
+  animation: like1 0.7s linear both;
+  opacity: 1;
+  transform: translate(-1rem, 2rem) scale(1);
+}
+@keyframes like1 {
+  to {
+    opacity: 0;
+    transform: translate(-1rem, 2rem) scale(3);
+  }
+}
+
+/* like effect 2 */
+/* .underphotoIconsLeft {
+  position: relative;
+}
+.like-effect {
+  animation: like2 0.7s linear both;
+  font-size: 1.3rem;
+  position: absolute;
+  top: 0;
+  left: 20px;
+  opacity: 1;
+  color: red;
+}
+@keyframes like2 {
+  0% {
+    top: 0px;
+  }
+  100% {
+    top: -60px;
+    transform: translateX(10px);
+    opacity: 0;
+  }
+}
+.like-effect:nth-child(4) {
+  animation-delay: 0;
+}
+.like-effect:nth-child(5) {
+  animation-delay: 0.2s;
+}
+.like-effect:nth-child(6) {
+  animation-delay: 0.4s;
+}
+.like-effect:nth-child(7) {
+  animation-delay: 0.5s;
+}
+.like-effect:nth-child(8) {
+  animation-delay: 0.7s;
+} */
+/* like effect 2 */
+.fa-ellipsis,
+.hearth2,
+.fa-comment,
+.fa-paper-plane,
+.fa-bookmark,
+.fa-face-smile {
+  position: relative;
+  animation: none;
+  transform: none;
+  color: rgb(194, 194, 194);
+  font-size: 1.4rem;
+  margin: 0.5rem;
+}
+.hearth2.active {
+  color: red;
+}
+.fa-face-smile {
+  color: black;
+}
+
+.likes {
+  font-weight: bold;
+  font-size: 0.9rem;
+  margin: 0.5rem;
+  color: grey;
+}
+.postDescription {
+  color: grey;
+  margin: 0.5rem;
+  font-weight: bold;
+}
+.postDescription span {
+  font-weight: normal;
+}
+.comments {
+  color: rgb(185, 185, 185);
+  margin: 0.5rem;
+}
+.comment {
+  display: flex;
+  align-items: center;
+  margin: 0.3rem;
+  width: 100%;
+}
+.comment h5 {
+  font-size: 0.9rem;
+  color: rgb(54, 54, 54);
+}
+.comment span {
+  width: 90%;
+  font-size: 0.9rem;
+  margin-left: 0.2rem;
+  word-wrap: break-word;
+}
+.hearthComment {
+  color: black;
+  transform: none;
+  position: relative;
+  animation: none;
+  font-size: 0.9rem;
+}
+.info {
+  font-size: 0.7rem;
+  color: rgb(185, 185, 185);
+  margin: 0.5rem;
+}
+.info span {
+  font-weight: bold;
+  font-size: 0.8rem;
+  color: rgb(133, 133, 133);
+  margin-left: 0.5rem;
+}
+.sendComment {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid rgb(231, 231, 231);
+}
+.sendComment input {
+  width: 80%;
+  height: 100%;
+  font-size: 0.8rem;
+  color: grey;
+  border: none;
+  outline: none;
+}
+.sendComment button {
+  margin-right: 0.5rem;
+  border: none;
+  background: none;
+  color: rgb(133, 203, 212);
+}

@@ -1,0 +1,164 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+ul,
+li {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(224, 238, 255);
+}
+.card {
+  margin-top: 1rem;
+  width: 500px;
+  height: 200px;
+  position: relative;
+  display: flex;
+  overflow: hidden;
+}
+.card:hover {
+  box-shadow: 0 0 10px grey;
+}
+.card .imgContainer {
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  flex: 4;
+  background-blend-mode: multiply;
+  background-color: rgba(0, 0, 0, 0.541);
+  transition: all 0.5s;
+}
+.card1 .imgContainer {
+  background-image: url("./photos/ist.jpg");
+}
+.card2 .imgContainer {
+  background-image: url("./photos/milano.jpg");
+}
+.card3 .imgContainer {
+  background-image: url("./photos/brazil.jpg");
+}
+.card4 .imgContainer {
+  background-image: url("./photos/paris.jpg");
+}
+.card:hover .imgContainer {
+  background-color: transparent;
+  background-size: 120% 120%;
+}
+.socials {
+  margin: 1rem 2rem;
+  width: 150px;
+  display: flex;
+  justify-content: space-between;
+}
+.socials i {
+  font-size: 1.5rem;
+  color: #fff;
+  opacity: 0;
+  transform: scale(0.1);
+  transition: all 0.2s ease;
+}
+.card:hover .socials i {
+  opacity: 1;
+  transform: scale(1);
+}
+.card:hover .socials i:nth-child(1) {
+  transition-delay: 0.2s;
+}
+.card:hover .socials i:nth-child(2) {
+  transition-delay: 0.3s;
+}
+.card:hover .socials i:nth-child(3) {
+  transition-delay: 0.4s;
+}
+.card:hover .socials i:nth-child(4) {
+  transition-delay: 0.5s;
+}
+.rightSide {
+  flex: 1;
+  background-color: #fff;
+  position: relative;
+}
+.rightSide p {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 2;
+  writing-mode: vertical-lr;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+  font-weight: bold;
+  color: grey;
+  transition: color 0.5s;
+}
+.card:hover .rightSide p {
+  color: #fff;
+}
+.card .rightSideBubble {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  transition: transform 0.5s;
+}
+.card1 .rightSideBubble {
+  background-color: rgba(0, 110, 255, 0.507);
+}
+.card2 .rightSideBubble {
+  background-color: rgba(204, 0, 255, 0.507);
+}
+.card3 .rightSideBubble {
+  background-color: rgba(229, 255, 0, 0.507);
+}
+.card4 .rightSideBubble {
+  background-color: rgba(102, 255, 0, 0.507);
+}
+.card:hover .rightSideBubble {
+  transform: scale(18);
+}
+.cardText {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  bottom: 5%;
+  right: 15%;
+  color: #fff;
+}
+.cardText h1 {
+  font-weight: 700;
+  font-size: 60px;
+}
+.cardText i {
+  font-weight: 700;
+  font-size: 40px;
+  margin-left: 1rem;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+.card:hover .cardText i {
+  opacity: 1;
+}
+
+.fa-plane {
+  color: #fff;
+  position: absolute;
+  font-size: 1.5rem;
+  bottom: -50px;
+  left: -50px;
+  transform: rotate(-45deg);
+  transition: all 0.5s;
+}
+.card:hover .fa-plane {
+  bottom: 10px;
+  left: 10px;
+}

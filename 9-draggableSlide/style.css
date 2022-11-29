@@ -1,0 +1,60 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+ul,
+li {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  position: relative;
+  width: 800px;
+  height: 200px;
+  overflow: hidden;
+}
+.cards {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px;
+  box-shadow: 0 0 5px grey inset;
+}
+.card {
+  overflow: hidden;
+  border-radius: 10px;
+  width: 200px;
+}
+.card img {
+  width: 200px;
+  height: 200px;
+}
+.infos {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+}
+
+.left {
+  position: absolute;
+  top: 50%;
+  left: 0;
+}
+.right {
+  position: absolute;
+  top: 50%;
+  right: 0;
+}

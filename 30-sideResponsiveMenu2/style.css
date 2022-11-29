@@ -1,0 +1,154 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+:root {
+  --li: 50px;
+}
+ul,
+li {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
+body {
+  height: 2000px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-x: hidden;
+}
+.header {
+  position: relative;
+  background-color: rgb(240, 240, 240);
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-weight: bold;
+  height: 60px;
+  transition: all 1s;
+}
+.header.sticky {
+  position: sticky;
+  top: 0;
+  animation: test 1s ease both;
+  box-shadow: 0 0 5px grey;
+}
+@keyframes test {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+.header h1 {
+  white-space: nowrap;
+}
+nav {
+  position: relative;
+}
+.nav.active .menuItem {
+  animation: itemAni 0.4s ease both;
+}
+@keyframes itemAni {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+.nav.active .menuItem:nth-child(1) {
+  animation-delay: 0.2s;
+}
+.nav.active .menuItem:nth-child(2) {
+  animation-delay: 0.3s;
+}
+.nav.active .menuItem:nth-child(3) {
+  animation-delay: 0.4s;
+}
+.nav.active .menuItem:nth-child(4) {
+  animation-delay: 0.5s;
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+  position: relative;
+  height: 60px;
+  width: 400px;
+  justify-content: space-between;
+}
+.menuItem {
+  font-size: 1.3rem;
+}
+.menuItem:hover {
+  cursor: pointer;
+}
+.underLine {
+  position: absolute;
+  bottom: 0;
+  height: 5px;
+  left: 0;
+  border-radius: 5px;
+  width: 60px;
+  background-color: black;
+  transition: all 0.4s;
+}
+.underLine::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -5px;
+  transform: translateX(-50%) rotate(180deg);
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 5px solid rgb(0, 0, 0);
+}
+
+.icon {
+  display: none;
+  font-size: 2rem;
+}
+
+@media screen and (max-width: 650px) {
+  nav {
+    position: absolute;
+    background-color: rgb(240, 240, 240);
+    left: 0;
+    width: 100%;
+    bottom: 0;
+    height: 0;
+    overflow: hidden;
+    transition: all 0.5s;
+  }
+
+  .icon {
+    display: block;
+  }
+  .underLine {
+    display: none;
+  }
+  nav ul {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  nav ul li {
+    line-height: var(--li);
+    width: 100vw;
+    margin: 0;
+    padding: 0 10px;
+  }
+  nav ul li:hover {
+    background-color: rgb(219, 219, 219);
+  }
+}

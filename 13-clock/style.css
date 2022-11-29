@@ -1,0 +1,162 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+ul,
+li {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  transition: all 1s;
+}
+
+.clock {
+  background: linear-gradient(to right, #fff 30%, rgb(221, 221, 221));
+  box-shadow: 0 0 5px rgb(126, 126, 126);
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.clock::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border: 2px solid rgb(194, 194, 194);
+  background-color: #fff;
+  z-index: 20;
+  border-radius: 50%;
+}
+
+/* numbers */
+
+.top,
+.left,
+.right,
+.bottom {
+  height: 3px;
+  width: 10px;
+  background-color: rgb(165, 165, 165);
+  position: absolute;
+  border-radius: 4px;
+}
+.top {
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 150%) rotate(90deg);
+}
+.left {
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+.right {
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+}
+.bottom {
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, -150%) rotate(90deg);
+}
+/* numbers */
+
+.milisecond,
+.second,
+.minute,
+.hour {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+}
+.milisecond {
+  width: 75%;
+  height: 75%;
+  z-index: 7;
+  transform: rotateZ();
+}
+.milisecond::before {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 50%;
+  background-color: black;
+  border-radius: 5px;
+}
+.second {
+  width: 70%;
+  height: 70%;
+  z-index: 6;
+  transform: rotateZ();
+}
+.second::before {
+  content: "";
+  position: absolute;
+  width: 4px;
+  height: 50%;
+  background-color: black;
+  border-radius: 5px;
+}
+.minute {
+  width: 50%;
+  height: 50%;
+  z-index: 2;
+}
+.minute::before {
+  content: "";
+  position: absolute;
+  width: 6px;
+  height: 50%;
+  background-color: black;
+  border-radius: 5px;
+}
+.hour {
+  width: 40%;
+  height: 40%;
+  z-index: 3;
+}
+.hour::before {
+  content: "";
+  position: absolute;
+  height: 50%;
+  width: 8px;
+  background-color: black;
+  border-radius: 5px;
+}
+
+/* mode */
+
+.mode {
+  position: fixed;
+  right: 20px;
+  top: 20px;
+  width: 60px;
+  height: 30px;
+  border-radius: 50px;
+  display: flex;
+  justify-content: flex-start;
+  border: 2px solid black;
+}
+.mode.dark {
+  justify-content: flex-end;
+}
+.circle {
+  height: 100%;
+  width: 50%;
+  background-color: black;
+  border-radius: 50%;
+}

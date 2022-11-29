@@ -1,0 +1,111 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+ul,
+li {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
+body {
+  height: 100vh;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  width: 50%;
+  height: 50%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.zero,
+.one,
+.two,
+.three,
+.four,
+.five,
+.six,
+.seven,
+.eight,
+.nine,
+.ten {
+  font-size: 200px;
+  position: absolute;
+  animation: number 1s;
+  opacity: 0;
+}
+@keyframes number {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: scale(0.7);
+  }
+}
+.start {
+  font-size: 200px;
+  opacity: 0;
+
+  animation: finish 7s 11s;
+}
+@keyframes finish {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.zero {
+  animation-delay: 10s;
+  color: red;
+}
+.one {
+  animation-delay: 9s;
+  color: red;
+}
+.two {
+  animation-delay: 8s;
+  color: red;
+}
+.three {
+  animation-delay: 7s;
+  color: red;
+}
+.four {
+  animation-delay: 6s;
+  color: orange;
+}
+.five {
+  animation-delay: 5s;
+  color: orange;
+}
+.six {
+  animation-delay: 4s;
+  color: green;
+}
+.seven {
+  animation-delay: 3s;
+  color: green;
+}
+.eight {
+  animation-delay: 2s;
+  color: green;
+}
+.nine {
+  animation-delay: 1s;
+  color: green;
+}
+.ten {
+  animation-delay: 0s;
+  color: green;
+}

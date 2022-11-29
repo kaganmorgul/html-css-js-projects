@@ -1,0 +1,88 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.container {
+  perspective: 400px;
+  width: 500px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.box {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  transform-style: preserve-3d;
+  animation: rot 5s linear infinite;
+}
+@keyframes rot {
+  from {
+    transform: rotateY(0deg) rotateX(0deg);
+  }
+  to {
+    transform: rotateY(360deg) rotateX(360deg);
+  }
+}
+.shadow {
+  width: 150px;
+  height: 150px;
+  background-color: rgb(193, 194, 193);
+  filter: blur(10px);
+  box-shadow: 0 0 0 20px rgba(235, 235, 235, 0.616);
+  animation: rot2 5s linear infinite;
+}
+@keyframes rot2 {
+  from {
+    transform: rotateY(0deg) rotateX(-90deg);
+  }
+  to {
+    transform: rotateY(360deg) rotateX(-95deg);
+  }
+}
+.boxitem {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 5px 10px #fff inset;
+  font-size: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(150, 150, 150);
+}
+.box1 {
+  transform: rotate(0) translateZ(75px);
+  background-color: grey;
+}
+.box2 {
+  transform: rotateY(90deg) translateZ(75px);
+  background-color: rgb(177, 177, 177);
+}
+.box3 {
+  transform: rotateY(-90deg) translateZ(75px);
+  background-color: rgb(180, 180, 180);
+}
+.box4 {
+  transform: rotateY(180deg) translateZ(75px);
+  background-color: rgb(218, 218, 218);
+}
+.box5 {
+  transform: rotateX(90deg) translateZ(75px);
+  background-color: rgb(235, 235, 235);
+}
+.box6 {
+  transform: rotateX(-90deg) translateZ(75px);
+  background-color: rgb(92, 92, 92);
+}

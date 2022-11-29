@@ -1,0 +1,80 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+.header,
+.footer {
+  height: 100vh;
+  width: 100%;
+  background-color: grey;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4rem;
+}
+.slider {
+  height: 100vh;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+}
+.leftSideContainer {
+  height: 100vh;
+  width: 70%;
+  transition: all 1s ease-in-out;
+}
+.rightSideContainer {
+  height: 100vh;
+  width: 30%;
+  transition: all 1s ease-in-out;
+}
+.leftSlide {
+  height: 100vh;
+  width: 100%;
+  background-position: center;
+  object-fit: cover;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.rightSlide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+  text-align: center;
+  justify-content: space-evenly;
+}
+.logo {
+  width: 200px;
+}
+.text {
+  font-size: 2rem;
+  color: rgb(163, 163, 163);
+}
+
+.SlideControl {
+  position: absolute;
+  top: 50%;
+  left: 70%;
+  transform: translate(-50%, -70%);
+}
+button {
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: gainsboro;
+  filter: drop-shadow(0px 0px 1px black);
+}
+button:first-child {
+  transform: translateY(-40%);
+}
+button:nth-child(2) {
+  transform: translateY(40%);
+}
+/* .up {
+}
+.down {
+} */

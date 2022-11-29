@@ -1,0 +1,273 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+ul,
+li {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
+body {
+}
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  margin: 1rem;
+}
+.loaderBox {
+  height: 250px;
+  border: 2px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.loader {
+  position: relative;
+  width: 50px;
+  height: 50px;
+}
+.loader1_1,
+.loader1_2,
+.loader1_3,
+.loader1_4,
+.loader1_5,
+.loader1_6,
+.loader1_7,
+.loader1_8 {
+  position: absolute;
+  height: 20px;
+  width: 7px;
+  background-color: black;
+  border-radius: 50%;
+}
+.loader1_1 {
+  top: 50%;
+  left: 0;
+  transform: rotate(90deg) translate(-50%, 0%);
+  animation: loader1_1 1.6s linear infinite;
+}
+@keyframes loader1_1 {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.loader1_8 {
+  top: 30%;
+  left: 20%;
+  transform: rotate(-45deg) translate(20%, -50%);
+  animation: loader1_8 1.6s linear infinite 0.4s;
+}
+@keyframes loader1_8 {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.loader1_3 {
+  top: 0%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  animation: loader1_3 1.6s linear infinite 0.6s;
+}
+@keyframes loader1_3 {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.loader1_7 {
+  top: 30%;
+  right: 20%;
+  transform: rotate(45deg) translate(-50%, -50%);
+  animation: loader1_7 1.6s linear infinite 0.8s;
+}
+@keyframes loader1_7 {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.loader1_2 {
+  top: 50%;
+  right: 0;
+  transform: rotate(90deg) translate(-50%, 0%);
+  animation: loader1_2 1.6s linear infinite 1s;
+}
+@keyframes loader1_2 {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.loader1_5 {
+  bottom: -30%;
+  left: 100%;
+  transform: rotate(-45deg) translate(-50%, -50%);
+  animation: loader1_5 1.6s linear infinite 1.2s;
+}
+@keyframes loader1_5 {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.loader1_4 {
+  bottom: -30%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  animation: loader1_4 1.6s linear infinite 1.4s;
+}
+@keyframes loader1_4 {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.loader1_6 {
+  bottom: -30%;
+  right: 100%;
+  transform: rotate(45deg) translate(50%, -50%);
+  animation: loader1_6 1.6s linear infinite 1.6s;
+}
+@keyframes loader1_6 {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.loader2 {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 7px solid black;
+  border-top-color: transparent;
+  position: relative;
+  animation: loader2 1s linear infinite;
+}
+.loader2::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  background-color: black;
+}
+@keyframes loader2 {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.loader3 {
+  display: flex;
+}
+.loader3 p {
+  margin: 0.2rem;
+  font-size: 2rem;
+}
+.loader3_1 {
+  font-weight: bold;
+  text-shadow: 5px 15px 3px grey;
+  animation: loader3_1 2.5s ease-out infinite 0s;
+}
+@keyframes loader3_1 {
+  to {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+}
+.loader3_2 {
+  font-weight: bold;
+  text-shadow: 5px 15px 3px grey;
+  animation: loader3_2 2.5s ease-out infinite 0.3s;
+}
+@keyframes loader3_2 {
+  to {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+}
+.loader3_3 {
+  font-weight: bold;
+  text-shadow: 5px 15px 3px grey;
+  animation: loader3_3 2.5s ease-out infinite 0.6s;
+}
+@keyframes loader3_3 {
+  to {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+}
+.loader3_4 {
+  font-weight: bold;
+  text-shadow: 5px 15px 3px grey;
+  animation: loader3_4 2.5s ease-out infinite 0.9s;
+}
+@keyframes loader3_4 {
+  to {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+}
+.loader3_5 {
+  font-weight: bold;
+  text-shadow: 5px 15px 3px grey;
+  animation: loader3_5 2.5s ease-out infinite 1.2s;
+}
+@keyframes loader3_5 {
+  to {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+}
+.loader3_6 {
+  font-weight: bold;
+  text-shadow: 5px 15px 3px grey;
+  animation: loader3_6 2.5s ease-out infinite 1.5s;
+}
+@keyframes loader3_6 {
+  to {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+}
+.loader3_7 {
+  font-weight: bold;
+  text-shadow: 5px 15px 3px grey;
+  animation: loader3_7 2.5s ease-out infinite 1.7s;
+}
+@keyframes loader3_7 {
+  to {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+}

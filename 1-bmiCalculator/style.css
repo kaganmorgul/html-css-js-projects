@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Bebas Neue', cursive;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+.box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+.box_content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30%;
+}
+
+.inp,
+.inp:focus {
+    border-style: none;
+    border-bottom-style: inset;
+    width: 95px;
+    transition: all 0.3s;
+    border-radius: 5px;
+}
+
+.inp:hover {
+    width: 115px;
+}
+
+img {
+    box-shadow: rgba(0, 0, 0, 0.884) 0px 25px 20px -20px;
+}
+
+.forms,
+.btn {
+    margin-top: 20px;
+}
+
+.buton {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn {
+    background-color: rgb(22, 22, 21);
+    border-radius: 5px;
+    padding: 15px;
+    color: white;
+    border-style: inherit;
+    width: 100px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn:hover {
+    background-color: rgba(22, 22, 21, 0.637);
+    text-decoration: underline;
+}
+
+.btn:active {
+    color: black;
+    text-decoration: underline;
+}
+
+.sonuc {
+    padding: 30px;
+}
+
+.sonuc p {
+    font-weight: bold;
+}
+
+.item {
+    font-size: 100px !important;
+}
+
+#renkkategori {
+    font-size: 20px;
+}
+
+.analogo {
+    font-size: 150px;
+}
+
+.analogo:hover {
+    color: rgba(0, 0, 0, 0.438);
+}
+
+.resetlogo {
+    font-size: 25px;
+}
+
+@media (max-width:200px) {
+    .analogo {
+        font-size: 80px;
+    }
+}

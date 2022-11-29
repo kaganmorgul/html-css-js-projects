@@ -1,0 +1,47 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+ul,
+li {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
+body {
+  height: 6000px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url("./charger.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  transition: all 2s;
+  background-blend-mode: multiply;
+  background-color: rgba(0, 0, 0, 0.418);
+}
+body.show {
+  background-color: transparent;
+}
+.carInfo {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  top: 100px;
+  left: 100px;
+  width: 300px;
+  height: 150px;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.555);
+  transition: all 2s;
+}
+.cardInfo:hover body {
+  background-color: transparent;
+}
