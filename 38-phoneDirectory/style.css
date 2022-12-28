@@ -1,0 +1,203 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+ul,
+li {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+input,
+button {
+  border: none;
+  outline: none;
+}
+input::placeholder {
+  font-size: 1.2rem;
+  color: rgb(207, 207, 207);
+}
+
+/* phone add box */
+.addPhone {
+  font-size: 2rem;
+  position: fixed;
+  right: 30px;
+  top: 10px;
+}
+.search {
+  font-size: 1.6rem;
+  position: fixed;
+  right: 30px;
+  top: 60px;
+}
+.countOfPhone {
+  background-color: orange;
+  color: #fff;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: translate(-50%, -50%);
+}
+.addPhoneBox,
+.editPhoneBox {
+  position: absolute;
+  top: -30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgb(238, 238, 238);
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  row-gap: 1rem;
+  padding: 0.5rem;
+  box-shadow: 0 0 10px rgb(194, 194, 194);
+  transition: all 0.5s;
+  opacity: 0;
+  z-index: 1;
+}
+.addPhoneBox.active {
+  top: 50%;
+  opacity: 1;
+}
+.editPhoneBox.active {
+  top: 50%;
+  opacity: 1;
+}
+.nameInputBox,
+.phoneInputBox,
+.editNameInputBox,
+.editPhoneInputBox {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  background-color: #fff;
+}
+.addPhoneBox input,
+.editPhoneBox input {
+  height: 60px;
+  padding: 0 1rem;
+  flex: 1;
+}
+.addPhoneBox button,
+.editPhoneBox button {
+  padding: 0.4rem 1rem;
+  align-self: flex-end;
+  border: 1px solid grey;
+  color: grey;
+  border-radius: 3px;
+}
+.fa-user,
+.fa-phone {
+  padding: 0.4rem;
+  font-size: 1.3rem;
+}
+.addPhoneBox .fa-xmark,
+.editPhoneBox .fa-xmark {
+  align-self: flex-start;
+  font-size: 1.3rem;
+}
+/* phone add box */
+
+/* container */
+.container {
+  position: relative;
+  width: 300px;
+  background-color: rgb(226, 226, 226);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 0 10px grey;
+}
+/* container */
+
+/* search area */
+.searchArea {
+  width: 300px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  margin-top: 5px;
+  box-shadow: 0 0 5px grey;
+  position: absolute;
+  top: -30%;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: all 0.5s;
+  opacity: 0;
+}
+.searchArea.active {
+  top: 10%;
+  opacity: 1;
+}
+.searchArea input {
+  flex: 1;
+  height: 100%;
+  padding: 0 1rem;
+}
+.searchArea input::placeholder {
+  padding-left: 1rem;
+}
+.searchArea i {
+  padding: 0.5rem;
+}
+/* search area */
+
+/* phone list */
+
+.phoneList {
+  width: 100%;
+  margin: 2rem 0;
+  max-height: 500px;
+  overflow-y: scroll;
+  transition: all 0.5s;
+}
+.phoneList::-webkit-scrollbar {
+  width: 5px;
+  background-color: #fff;
+  display: none;
+}
+.phoneList::-webkit-scrollbar-thumb {
+  background-color: rgb(156, 156, 156);
+  border-radius: 5px;
+}
+.person {
+  background-color: rgb(247, 247, 247);
+  border-bottom: 2px solid rgb(78, 78, 78);
+  padding: 0 5px;
+  opacity: 1;
+  transition: all 1s;
+}
+.person.remove {
+  transform: translateX(-100%);
+  opacity: 0;
+}
+.personInfo {
+  display: flex;
+  justify-content: space-between;
+  height: 50px;
+  align-items: center;
+  width: 100%;
+}
+.name,
+.number {
+  font-weight: bold;
+}
+/* phone list */

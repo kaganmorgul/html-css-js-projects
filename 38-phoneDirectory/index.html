@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script src="https://kit.fontawesome.com/ff494a0e91.js" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="addPhone">
+        <i class="fa-solid fa-plus showAddBox"></i>
+    </div>
+    <div class="search">
+        <i class="fa-solid fa-magnifying-glass"></i>
+    </div>
+    <form class="addPhoneBox">
+        <i class="fa-solid fa-xmark closeAddBox"></i>
+        <div class="nameInputBox">
+            <input class="nameInput" type="text" placeholder="name">
+            <i class="fa-solid fa-user"></i>
+        </div>
+        <div class="phoneInputBox">
+            <input class="phoneInput" type="number" placeholder="phone">
+            <input class="idInput" type="number" style="display: none;">
+            <i class="fa-solid fa-phone"></i>
+        </div>
+        <button class="addPhoneButton" type="submit">Add</button>
+    </form>
+    <form class="editPhoneBox">
+        <i class="fa-solid fa-xmark closeEditBox"></i>
+        <div class="editNameInputBox">
+            <input class="editNameInput" type="text" placeholder="name">
+            <i class="fa-solid fa-user"></i>
+        </div>
+        <div class="editPhoneInputBox">
+            <input class="editPhoneInput" type="number" placeholder="phone">
+            <input class="editIdInput" type="number" style="display: none;">
+            <i class="fa-solid fa-phone"></i>
+        </div>
+        <button class="editPhoneButton" type="submit">edit</button>
+    </form>
+    <div class="searchArea">
+        <input type="text" class="searchInput" placeholder="search person">
+        <i class="fa-solid fa-magnifying-glass"></i>
+    </div>
+    <div class="container">
+        <div class="countOfPhone"></div>
+        <ul class="phoneList">
+        </ul>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
